@@ -1,2 +1,0 @@
-# jacksonrya.github.io
-Portfolio
