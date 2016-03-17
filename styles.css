@@ -20,6 +20,14 @@
 	height: auto;
 }
 
+#reveal {
+	z-index:-2;
+}
+
+#mask:hover {
+	display: none;
+}
+
 .logo {
 	position: relative;
 	margin: 25px;
