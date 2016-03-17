@@ -1,0 +1,14 @@
+* {
+	margin: 25px;
+	padding:;
+}
+
+#container {
+	position: absolute;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Fairplay Display', serif;
+	text-align: left;
+}
