@@ -3,24 +3,25 @@
 	padding: 0;
 }
 
-html { 
-  background: url(images/red-untitled-1.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.background {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 1000px;
+	height: 300px;
+	z-index: -1;
 }
 
-.scaffold {
-	position: fixed;
-	z-index: -1;
-	top: 0px;
-	left: 0px;
-	width: 800px;
+.background img {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
 }
 
 .logo {
 	position: relative;
-	margin: 0;
-	padding: 0;
+	margin: 25px;
+	padding: 25px;
 }
