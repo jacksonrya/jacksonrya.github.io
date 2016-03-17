@@ -1,14 +1,26 @@
 * {
-	margin: 25px;
-	padding:;
+	margin: 0;
+	padding: 0;
 }
 
-#container {
-	position: absolute;
-	text-align: center;
+html { 
+  background: url(images/red-untitled-1.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-h1 {
-	font-family: 'Fairplay Display', serif;
-	text-align: left;
+.scaffold {
+	position: fixed;
+	z-index: -1;
+	top: 0px;
+	left: 0px;
+	width: 800px;
+}
+
+.logo {
+	position: relative;
+	margin: 0;
+	padding: 0;
 }
