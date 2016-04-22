@@ -26,6 +26,8 @@
 			<a href="#">
 				<img class="logo" src="images/logo-opt.svg">
 			</a>
+			
+			<img id="imalink" src="images/mano_cursor.svg">
 			<img id="splashgif" src="images/splashgif2.gif">
 		
 		</div>
@@ -115,7 +117,7 @@
 				$('#UC').hide();
 				$('#contact').hide();
 				$('#aboutme').hide();
-				$('#contactlink').show();
+				$('#imalink').hide();
 				$("#splash .logo").on( "click", function() {
 			        console.log('click!');
 			        $("#UC").show(500);
@@ -128,6 +130,10 @@
 			        console.log('click!');
 			        $("#aboutme").show(500);
 			    });
+			    
+			    setTimeout(function () {
+					$("#imalink").show(1000)
+				}, 15000);
 			});
 		
 		</script>

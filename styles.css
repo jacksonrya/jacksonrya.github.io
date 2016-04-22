@@ -21,8 +21,18 @@ a {
 
 #splash .logo {
 	position: relative;
-	float: left;
+	display: block;
 	z-index: 12;
+}
+
+#imalink {
+	position: absolute;
+	display: block;
+	z-index: 3;
+	width: 15px;
+	height: auto;
+	top: 98px;
+	left: 365px;
 }
 
 #splashgif {
