@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<title>Jackson Baker Ryan</title>
 		<link REL="SHORTCUT ICON" HREF="images/favicon_image/unbranded-logo1.png">
@@ -10,27 +10,129 @@
 		<!-- Associated keywords -->
 		<meta keywords="jackson, baker, ryan, portfolio, personal, syracuse, architectural, association">
 		
+		<link href='https://fonts.googleapis.com/css?family=Cousine:400' rel='stylesheet' type='text/css'>
+		
 		<link href="styles.css" rel="stylesheet">
+		
+		<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
 		
 	</head>
 
 	<body>
 	
-		<div class="jumbotron">
+		<!-- Splash Page -->
+		<div id="splash">
 		
-			<img class="logo" src="images/logo-opt.svg" alt="My Logo" width="250px">
+			<a href="#">
+				<img class="logo" src="images/logo-opt.svg">
+			</a>
+			<img id="splashgif" src="images/splashgif2.gif">
 		
 		</div>
-	
-		<div class="container">
 		
-			<div id="doit"></div>
 		
-			<img id= "swap1" src="images/redcrop-untitled-2.gif">
+		<div id="contactst">
+		
+			<div id="contactlink">
 			
+				<a href="#" id ="link">CONTACT</a><br>
+			
+			</div>
+			
+			<div id="contact">
+			
+				<img id="ccbg" src="images/contactcardbg.svg">
 				
+				<div id="information">
+				
+					<ul>
+						<li>jackson.baker.ryan</li>
+						<li>@gmail.com</li><br>
+						<li>4053342893</li><br>
+						<li>1305 E Madison St</li>
+						<li>Unit 3</li>
+						<li>Seattle WA 98122</li>
+					</ul>
+			
+			</div>
+			
+		</div>
+		
+		<div id="UC">
+			
+			<p>under construction</p>
+		
 		</div>
 
+			
+		<div id="aboutmest">
+		
+			<div id="aboutmelink">
+			
+				<a href="#" id ="link">ABOUT ME</a><br>
+			
+			</div>
+			
+			<div id="aboutme">
+			
+				<img id="ambg" src="images/aboutmebg.svg">
+				
+				<div id="aminformation">
+				
+					<ul>
+						<li>Jackson Baker Ryan is an architectural artist that works primarily in digital modeling, rendering, and collage. His works are grounded by spatial design and focally driven by the curated experience.<br><br>He pursued a B.Arch at the Architectural Association and Syracuse University, and is currently transferring to the University of Washington to obtain a degree in Human Centered Design and Engineering.</li>
+					</ul>
+			
+			</div>
+			
+		</div>
+		
+		
+		<!-- End Splash Page -->
+	
+	
+		<script>
+			// Universal Dimension Variables
+			var xdim = $(window).width();
+			var ydim = $(window).height();
+			var fullw = xdim;
+			
+			$(document).ready(function(){
+			
+				$('body').css('height', ydim + 'px');
+				$('body').css('width', fullw + 'px');
+			
+				console.log('xdim = ' + xdim)
+				console.log('ydim = ' + ydim)
+				
+			});
+		</script>
+		
+		<script>
+			// Function shows 'under construction'
+			
+			$(document).ready(function() {
+				$('#UC').hide();
+				$('#contact').hide();
+				$('#aboutme').hide();
+				$('#contactlink').show();
+				$("#splash .logo").on( "click", function() {
+			        console.log('click!');
+			        $("#UC").show(500);
+			    });
+			    $("#contactlink #link").on( "click", function() {
+			        console.log('click!');
+			        $("#contact").show(500);
+			    });
+			    $("#aboutmelink #link").on( "click", function() {
+			        console.log('click!');
+			        $("#aboutme").show(500);
+			    });
+			});
+		
+		</script>
+		
+			
 	</body>
 	
 </html>

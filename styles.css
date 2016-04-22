@@ -3,46 +3,141 @@
 	padding: 0;
 }
 
-.jumbotron {
-	z-index: 5;
-	height: 250px;
-	width: 350px;
+a {
+	text-decoration: none;
+	font-family: 'Cousine';
+	font-weight: 400;
+	color: black;
+}
+
+#splash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#splash .logo {
+	position: relative;
+	float: left;
+	z-index: 12;
+}
+
+#splashgif {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .logo {
-	position: relative;
-	margin: 25px;
-	padding: 25px;
+	float: left;
 	z-index: 1;
-}
-
-.container {
-	z-index: -1;
-	opacity: .99;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-}
-
-#doit {
-	z-index: -2;
-	opacity: .99;
-	position: absolute;
-	background-image: url('images/redcrop-untitled-1.gif');
-	background-size: 800px 1017.48px;
-	width: 800px;
-	height: 1017.48px;
-}
-
-#swap1 {
-	z-index: -1;
-	opacity: .99;
-	position: absolute;
-	width: 800px;
+	padding-top: 58px;
+	padding-left:125px;
+	width: 250px;
 	height: auto;
 }
 
+#contactst {
+	position: absolute;
+	z-index: 2;
+	width: 290px;
+	height: 580px;
+	top: 35%;
+	left: 18%;
+	
+}
 
-#swap1:hover {
-	opacity: 0;
+#contactlink {
+	top: 5%;
+	right: 5%;
+	z-index: 1;
+	position: absolute;
+	font-size: 19px;
+	text-align: left;
+}
+
+#ccbg {
+	display: block;
+	position: absolute;
+	width: 290px;
+	height: auto;
+}
+
+#information {
+	position: absolute;
+	display: block;
+	z-index: 2;
+	margin-left: 20px;
+	font-family: 'Cousine';
+	font-weight: 400;
+	color: black;
+	font-size: 17px;
+}
+
+#information ul {
+	list-style-type: none;
+	padding-top: 280px;
+}
+
+#aboutmest {
+	position: absolute;
+	z-index: 2;
+	width: 515.1px;
+	height: 290px;
+	top: -200px;
+	left: 200%;
+}
+
+#aboutmelink {
+	top: 4%;
+	right: 5%;
+	z-index: 1;
+	position: absolute;
+	font-size: 19px;
+	text-align: left;
+}
+
+#ambg {
+	display: block;
+	position: absolute;
+	width: 515.1px;
+	height: auto;
+}
+
+#aminformation {
+	position: relative;
+	display: block;
+	z-index: 2;
+	margin-left: 20px;
+	font-family: 'Cousine';
+	font-weight: 400;
+	color: black;
+	font-size: 15px;
+}
+
+#aminformation ul {
+	list-style-type: none;
+	padding-top: 75px;
+	padding-right: 25px;
+}
+
+#UC {
+	position: absolute;
+	direction: block;
+	top: 70%;
+	left: 300%;
+	z-index: 1;
+}
+
+p {
+	font-size: 100%;
+	text-align: center;
+	font-family: 'Cousine';
+	font-weight: 400;
+	color: black;
 }
