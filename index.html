@@ -108,6 +108,24 @@
 				console.log('ydim = ' + ydim)
 				
 			});
+			
+			if (xdim < 1220) {
+					console.log('x too small');
+					$('body').css("overflow-x", "hidden");
+				}
+				
+				else {
+			        console.log('x is wide!');
+				}
+			
+			if (ydim < 892) {
+					console.log('y too small');
+					$('body').css("overflow-y", "hidden");
+				}
+				
+				else {
+			        console.log('y is wide!');
+				}
 		</script>
 		
 		<script>
@@ -121,6 +139,7 @@
 				$("#splash .logo").on( "click", function() {
 			        console.log('click!');
 			        $("#UC").show(500);
+			        $("#imalink").hide(500);
 			    });
 			    $("#contactlink #link").on( "click", function() {
 			        console.log('click!');
@@ -134,6 +153,7 @@
 			    setTimeout(function () {
 					$("#imalink").show(1000)
 				}, 15000);
+				
 			});
 		
 		</script>
