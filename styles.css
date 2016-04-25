@@ -22,17 +22,7 @@ a {
 #splash .logo {
 	position: relative;
 	display: block;
-	z-index: 12;
-}
-
-#imalink {
-	position: absolute;
-	display: block;
-	z-index: 3;
-	width: 15px;
-	height: auto;
-	top: 98px;
-	left: 365px;
+	z-index: 2;
 }
 
 #splashgif {
@@ -46,10 +36,20 @@ a {
 .logo {
 	float: left;
 	z-index: 1;
-	padding-top: 58px;
-	padding-left:125px;
-	width: 250px;
+	padding-top: 2%;
+	padding-left: 2%;
+	width: 9%;
 	height: auto;
+}
+
+#imalink {
+	position: absolute;
+	display: block;
+	z-index: 3;
+	width: .75%;
+	height: auto;
+	top: 5%;
+	left: 9%;
 }
 
 #contactst {
