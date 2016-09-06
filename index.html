@@ -245,9 +245,9 @@
 		
 		//Edit plug-in script to slow scroll horizontally to anchor
 		
-			var clickCount = -1;	
+			var clickCount = 0;
 			// Turns links into on-click toggles for UnderConstruction
-			$('a').click(function() {
+			$('a').not("#information a, #negative a").click(function() {
 				clickCount++;
 				randomizeColor();
 				menuGrowth(clickCount);
