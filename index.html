@@ -2,169 +2,451 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta charset="UTF-8"> 
+		<!-- OPENGRAPH META TAGS -->
 		<meta property="og:title" content="Jackson Baker Ryan's Portfolio" />
 		<meta property="og:url" content="jbr.fyi" />
 		<meta property="og:description" content="please, come in. i need some help reorganizing." />
 		<meta property="og:image" content="http://www.jbr.fyi/images/og_img-01.jpg" />
-	
-		<title>Jackson Baker Ryan</title>
-		<link REL="SHORTCUT ICON" HREF="images/favicon_image/unbranded-logo1.png">
-		
-		<!-- Description showed in bookmarks and potentially the title of the search engine -->
-		<meta name="description" content="Jackson Baker Ryan : ">
-		
-		<!-- Associated keywords -->
-		<meta keywords="jackson, baker, ryan, portfolio, personal, syracuse, architectural, association">
-		
-		<link href='https://fonts.googleapis.com/css?family=Cousine:400' rel='stylesheet' type='text/css'>
-		
-		<link href="styles.css" rel="stylesheet">
-		
-		<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
-		
-	</head>
+		<title>jackson baker ryan</title>
 
+
+		<!-- Begin Inspectlet Embed Code -->
+		<script type="text/javascript" id="inspectletjs">
+		window.__insp = window.__insp || [];
+		__insp.push(['wid', 1497400481]);
+		(function() {
+		function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+		setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+		})();
+		</script>
+		<!-- End Inspectlet Embed Code -->
+
+
+		<!--Favicon-->
+		<link REL="SHORTCUT ICON" HREF="images/favicon_image/unbranded-logo1.png">
+				
+		<!--Fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Arapey:400,400italic|Cousine:400,700' rel='stylesheet' type='text/css'>
+		
+		<!--Styles-->
+		<link href="css/UnderConstructionStyles.css" rel="stylesheet">
+		
+		<!--JS.-->
+		<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/horwheel.js"></script>
+		<script type="text/javascript" src="js/pace.min.js" data-pace-options='{ "ghostTime": 10000000, "maxProgressPerFrame": 10 }'></script>
+
+
+	</head>
+	
 	<body>
 	
-		<!-- Splash Page -->
-		<div id="splash">
+	
+	
+		<!-- START SPLASH PAGE -->
 		
-			<a href="#">
-				<img class="logo" src="images/logo-opt.svg">
-			</a>
+		
+			<!-- BLACK SCREEN & HOVER ELEMENT -->
+		<div id="screen"></div>
+		<div id="negative"><a id="negclick" onclick="negative(); return false;">_</a></div>
+		
+			<!-- FLASH AND FADE TEXT -->
+		<div class="splash_text">
+		
+			<div id="top"><div id="hi">hi</div>
+			<div id="please">welcome</div></div>
+			<div id="bottom"><div id="help">my things are a mess, but please come in</div></div>
+			<div id="hint">(click here)</div>
 			
-			<img id="imalink" src="images/mano_cursor.svg">
-			<img id="splashgif" src="images/splashgif2.gif">
-		
 		</div>
 		
+			<!-- HOUSE SYMBOL -->
+		<div id="triangle-up"></div>
+		<div class="house_wdw" id="left"></div>
+		<div class="house_wdw" id="right"></div>
 		
-		<div id="contactst">
 		
-			<div id="contactlink">
-			
-				<a href="#" id ="link">CONTACT</a><br>
-			
+		
+		<!-- END SPLASH PAGE -->
+		
+		
+		
+		<!-- START INDEX PAGE -->
+		
+		
+		
+		<div class="vp" id="index_pg">
+	
+			<div id="header">
+		
+				<img id="logo" src="images/logo2-01.svg">
+				
+				<div id="ret">
+					<!--Change width to responsive-->
+					<a href="#" onclick="ret(); return false;">
+					
+						<img src="images/return_icon.svg" alt="RETURN" width="30px" usemap="#returnmap">
+						
+					</a>
+					
+				</div>
+				
+				<div id="clean"><a href="/" onclick="clean(); return false;">clean my mess</a></div>
+		
 			</div>
 			
-			<div id="contact">
+			<div id="body">
 			
-				<img id="ccbg" src="images/contactcardbg.svg">
+				<!-- UNDER CONSTRUCTION -->
 				
+				<div id="underConstruction">
+					<h4>UNDER CONSTRUCTION</h4>
+				</div>
+				
+				<!-- END UNDER CONSTRUCTION -->
+			
+				<!-- START FLOATING INFORMATION WINDOWS -->
+			
+				<div id="information_windows">
+					
+					<div class="window" id="about" style="top: 10vh; left: 10vw;">
+						
+						<div class="wdw_header">about jbr</div>
+						
+						<p class="wdw_content">Jackson Baker Ryan is an architectural artist that works primarily in digital modeling, rendering, and collage. His works are grounded by spatial design and focally driven by the curated experience.</br></br>He pursued a B.Arch without completion at the Architectural Association and Syracuse University, and is currently transferring to the University of Washington to obtain a degree in Human Centered Design and Engineering.
+							
+						</p>
+						
+					</div>
+					
+					<div class="window" id="etc" style="top: -30vh; left: 35vw;">
+						
+						<div class="wdw_header">et cetera</div>
+						
+						<p class="wdw_content">
+						<a target="_blank" href="http://cache.moda">CACH&Eacute;</a>
+							
+						</p>
+						
+					</div>
+				
+					<div class="window" id="contact" style="top: -70vh; left: 60vw;">
+						
+						<div class="wdw_header">contact</div>
+						
+						<p class="wdw_content">jackson.baker.ryan@gmail.com</br></br>
+						405.334.2893</br></br>
+						<a target="_blank" href="https://www.instagram.com/j._.b._.r/">insta</a></br>
+						<a target="_blank" href="http://www.linkedin.com/in/jacksonbakerryan">linkedin</a>
+							
+						</p>
+						
+					</div>
+					
+				</div>
+				
+				<!-- END FLOATING INFORMATION WINDOWS -->
+				
+				<!-- START PROJECT THUMBNAILS/ MENU -->
+			
+				<div id="index_container">
+			
+					<div class="index_box" loaded="yes" id="box1" active="0" style="left: 3vw;"><a href="#box1gallery"><img src="images/index_1-1.jpg"></a></div>
+					
+					<div class="index_box" loaded="yes" id="box2" active="0" style="top: -25vh; left: 30vw;"><a href="#box2gallery"><img src="images/index_2-1.jpg"></a></div>
+					
+					<div class="index_box" id="box3" active="0" style="top: 3vh; left: -7vw;"><a href="#box3gallery"><img src="images/index_3-1.jpg"></a></div>
+					
+					<div class="index_box" id="box4" active="0" style="top: 18vh; left: 60vw;"><a href="#box4gallery"><img src="images/index_4-1.jpg"></a></div>
+					
+					<div class="index_box" id="box5" active="0" style="top: -50vh; left: 55vw;"><a href="#box5gallery"><img src="images/index_1-2.jpg"></a></div>
+					
+					<div class="index_box" id="box6" active="0" style="top: -63vh; left: 20vw;"><a href="#box6gallery"><img src="images/index_2-2.jpg"></a></div>
+					
+					<div class="index_box" id="box7" active="0" style="top: -47vh; left: 28vw;"><a href="#box7gallery"><img src="images/index_3-2.jpg"></a></div>
+					
+					<div class="index_box" loaded="yes" id="box8" active="0" style="top: -73vh; left: 50vw;"><a href="#box8gallery"><img src="images/index_1-3.jpg"></a></div>
+					
+					<div class="index_box" id="box9" active="0" style="top: -60vh; left: 3vw;"><a href="#box9gallery"><img src="images/index_2-3.jpg"></a></div>
+					
+					<div class="index_box" id="box10" active="0" style="top: -93vh; left: 70vw;"><a href="#box10gallery"><img src="images/index_1-4.jpg"></a></div>
+					
+				</div>
+				
+				<div id="nav">
+					
+					<ul id="project_menu" style="list-style-type:none">
+					
+						<li id="box3" active="0"><a id="m" href="#" alt="3-1">spacemaker</a></li><br>
+						
+						<li id="box6" active="0"><a id="m" href="#" alt="2-2">santa monica study</a></li><br>
+						
+						<li id="box7" active="0"><a id="m" href="#" alt="3-2">salsa-obsessed house</a></li><br>
+						
+						<li id="box2" active="0" loaded="yes"><a id="m" href="#box2gallery" alt="2-1">accessing luminosity</a></li><br>
+						
+						<li id="box9" active="0"><a id="m" href="#" alt="2-3">aeolus</a></li><br>
+						
+						<li id="box8" active="0" loaded="yes" ><a id="m" href="#box8gallery" alt="1-3">re-viewing nolli</a></li><br>
+						
+						<li id="box5" active="0"><a id="m" href="#" alt="1-2">le fresnoy 2.0</a></li><br>
+						
+						<li id="box4" active="0"><a id="m" href="#" alt="4-1">infrastructures</a></li><br>
+						
+						<li id="box1" active="0" loaded="yes" ><a id="m" href="#box1gallery" alt="1-1">home for sale(s)</a></li><br>
+						
+						<li id="box10" active="0"><a id="m" href="#" alt="1-4">sketchbook</a></li><br>
+						
+						<li id="box0" active="0"><a id="m" href="#box0gallery" style="opacity: 0.0;">jbr.fyi</a></li><br>
+						
+					</ul>
+				
+				</div>
+				
+				<!-- END PROJECT THUMBNAILS/ MENU -->
+		
+			</div>
+			
+			<div id="footer">
+				
+				<div id="CC">
+				
+					<a id="box0" active="0" href="#box0gallery" title ="CC Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)">
+					
+						<img src="images/CC/cc.svg">
+						<img src="images/CC/by.svg">
+						<img src="images/CC/nc.svg">
+						<img src="images/CC/sa.svg">
+						
+					</a>
+					
+				</div>
+		
 				<div id="information">
 				
-					<ul>
-						<li>jackson.baker.ryan</li>
-						<li>@gmail.com</li><br>
-						<li>4053342893</li><br>
-						<li>1305 E Madison St</li>
-						<li>Unit 3</li>
-						<li>Seattle WA 98122</li>
-					</ul>
-			
+					<a href="/" onclick="informationwindow('about'); return false;">about jbr</a>
+					<a href="/" onclick="informationwindow('etc'); return false;">et cetera</a>
+					<a href="/" onclick="informationwindow('contact'); return false;">contact</a>
+					
+				</div>
+		
 			</div>
-			
-		</div>
-		
-		<div id="UC">
-			
-			<p>under construction</p>
 		
 		</div>
+		
+		
+		
+		<!-- END INDEX PAGE -->
+		
+						
+		<script>
+		
+		//Edit plug-in script to slow scroll horizontally to anchor
+		
+			var clickCount = -1;	
+			// Turns links into on-click toggles for UnderConstruction
+			$('a').click(function() {
+				clickCount++;
+				randomizeColor();
+				menuGrowth(clickCount);
+			});
+		
+			// Changes color of UNDER CONSTRUCTION title by random on click
+			// 
+			function randomizeColor() {
+			      var font_colour = Math.floor(Math.random() * 16777215).toString(16);
+				  font_colour = "#" + ("000000" + font_colour).slice(-6);
+				  console.log("colorCHANGE");
+				  $('h4').css({ color: font_colour });
+			}
+			
+			function menuGrowth(clickCount) {
+				var fontSize = 14 + clickCount;
+				$('#information a').css('font-size', fontSize + 'px');
+			}
+            
+            window.onkeydown = function(e) {
+			    if(e.keyCode == 32 && e.target == document.body) {
+			        e.preventDefault();
+			        return false;
+			    }
+			};
+						
+			$('.index_box').draggable({ stack: ".index_box", containment: "#index_pg", scroll: false});
+						
+			function clean() {
+				$('#index_container #box5').animate({ top: '-60vh', left: '62vw'}, 300, 'easeOutSine');
+				function devis() {
+					$('#clean').stop().css({ visibility: 'hidden'});
+				}
+				setTimeout(devis, 305);
+			}
+					
+			//Starts count for # of box requests--determines order of visibility
+			var clix = 0;
+			var caption_vis = 1;
+			
+			function informationwindow(tri) {
+			
+				$('#information_windows').css('z-index', '90');
+				
+				$('#information_windows #' + tri).css('visibility', 'visible');
+				
+			};
+			
+			function close(tri) {
+			
+				$('#information_windows #' + tri).css('visibility', 'hidden');
+				
+			};
+			
+			function description(BC) {
+            	
+	            console.log('D Click');
+	            console.log('#gheader h2 ' + BC);
+	            var $isithidden = $("#gheader #h2" + BC).css('visibility');
+	            console.log($isithidden +' ' + BC);
+	            
+	            if ( $isithidden === "hidden" ) {
+	            
+		            $("#gheader  #h2" + BC).css('visibility', 'visible');
+		            
+		            console.log('if');
+		            
+	            } else if ( $isithidden === "visible" ) {
+	            
+		            $("#gheader #h2" + BC).css('visibility', 'hidden');
+		            
+	            } else {
+	            
+	            	console.log('error');
+	            	
+				};
+            };
+			
+			   /////
+				
+			$(document).ready(function() {
+			
+			
+				// PREVENT SCROLLING SPLASH AND INDEX_PAGE
+			
+				$("html").css("overflow", "hidden");
+								
+			});
+			
+			// END // OF DOCUMENT.READY FUNCTION
+			
+			///////////////////////////////////
+			
+			// START // OF SPLASH PAGE WORDS FLASH AND FADE
+				
+					// talk_loop closes at negative.hover
+				
+				var talk_loop = 0;
+				
+				function hi() {
+					$('#hi').css({'opacity': 1.0}).animate({ opacity: 0.0 }, 5000);
+				}
+				function please() {
+					$('#please').css({'opacity': 1.0}).animate({ opacity: 0.0 }, 5000);
+				}
+				function help() {
+					$('#help').css({'opacity': 1.0}).animate({ opacity: 0.0 }, 5000);
+				}
+				function hint() {
+					$('#hint').css({'opacity': 0.8});
+				}
+				
+
+				function loopLi() {
+				    setInterval(function() { // this code is executed every 5100 milliseconds:
+				
+				        if(talk_loop === 0) {
+				         //   setTimeout(hi, 350);
+							setTimeout(please, 1500);
+							setTimeout(help, 3250);
+				        }
+				
+				    }, 5100);
+					setTimeout(hint, 10500);
+				}
+				
+				function clear_screen() {
+					$('#screen').css({ width: 0, "z-index": "-2", visibility: "hidden", top: 0, left: 0, border: 0, width: 0, height: 0 });
+					$('#negative, .house_wdw, #triangle-up, #floor, #hint, .splash_text').css({ width: 0, height: 0, top: '-100vh', left: 0, display: "hidden", visibility: "hidden", 'z-index': '-2' });
+					function reveal_menu() {
+							$('#ret').css({ visibility: "visible" }).animate({ opacity: 1.0}, 250).off();
+							$('#nav, #logo, #information').css({ visibility: "visible" }).animate({opacity: 1}, 750).off();
+					}
+						
+					setTimeout(reveal_menu, 250);
+				}
+			
+			
+				function negative() {
+					talk_loop = 1;
+					$('#negative').css({'z-index': '-2'});
+					$('#nav, #ret, #logo, #information').css({ opacity: 0.0, visibility: "hidden" });
+					$('.splash_text, #top, #bottom, .pace .pace-progress').css({ opacity: 1.0, visibility: "visible" }).animate({ opacity: 0.0, visibility: "hidden"}, 250, 'easeOutSine');
+					$('#top, #bottom, #hi, #please, #help').css({width: 0, height: 0, 'z-index': '-2', left: '-100vw'});
+				    $("#screen").stop().animate({
+				        top: "-49.5vh",
+				        left: "-49.375vw",
+				        width: "100vw",
+				        height: "320vh",
+				    }, 1500, 'easeInSine' );
+				    setTimeout(clear_screen, 1500);
+				}
+				
+				Pace.on('done', function() {
+				
+					setTimeout(hi, 500);
+					setTimeout(please, 1500);
+					setTimeout(help, 3250);
+					
+					$(loopLi);
+				
+				});
+				
+				// END // OF SPLASH PAGE WORDS FLASH AND FADE-- negative.hover WAS INITIATED TO END LOOP
 
 			
-		<div id="aboutmest">
-		
-			<div id="aboutmelink">
 			
-				<a href="#" id ="link">ABOUT ME</a><br>
+			///////////////////////////////////
+						
+			// START // OF ENLARGE TEXT MENU ON HOVER OVER INDEX IMAGES
 			
-			</div>
+			$( "div[id^='box'], #CC a" ).hover(
+						
+					function() {
+						// Entangles index images and menu links					
+						var coor = $( this ).attr("id");
+						// Builds selection with same "id=" then adds styling class
+						$("li[id=" + coor + "]").stop(true, true).animate({ fontSize : '24px' }, 3000);
+					},
+					function() {
+						// Releases styling classes after hover ends
+						var coor = $( this ).attr("id");						
+						$("li[id=" + coor + "]").stop().animate({ fontSize : '14px' }, 250);
+					}
+			);
 			
-			<div id="aboutme">
+			// END // OF ENLARGE TEXT MENU ON HOVER OVER INDEX IMAGES
 			
-				<img id="ambg" src="images/aboutmebg.svg">
+			function ret() {
+				var ret_distance = $('body').offset().left;
 				
-				<div id="aminformation">
-				
-					<ul>
-						<li>Jackson Baker Ryan is an architectural artist that works primarily in digital modeling, rendering, and collage. His works are grounded by spatial design and focally driven by the curated experience.<br><br>He pursued a B.Arch at the Architectural Association and Syracuse University, and is currently transferring to the University of Washington to obtain a degree in Human Centered Design and Engineering.</li>
-					</ul>
+				$('html, body').stop(true, true).animate({
+                
+                    scrollLeft: ret_distance }, 800, 'easeInOutSine');
+			}
 			
-			</div>
-			
-		</div>
-		
-		
-		<!-- End Splash Page -->
-	
-	
-		<script>
-			// Universal Dimension Variables
-			var xdim = $(window).width();
-			var ydim = $(window).height();
-			var fullw = xdim;
-			
-			$(document).ready(function(){
-			
-				$('body').css('height', ydim + 'px');
-				$('body').css('width', fullw + 'px');
-			
-				console.log('xdim = ' + xdim)
-				console.log('ydim = ' + ydim)
-				
-			});
-			
-			if (xdim < 1220) {
-					console.log('x too small');
-					$('body').css("overflow-x", "hidden");
-				}
-				
-				else {
-			        console.log('x is wide!');
-				}
-			
-			if (ydim < 892) {
-					console.log('y too small');
-					$('body').css("overflow-y", "hidden");
-				}
-				
-				else {
-			        console.log('y is wide!');
-				}
 		</script>
 		
-		<script>
-			// Function shows 'under construction'
-			
-			$(document).ready(function() {
-				$('#UC').hide();
-				$('#contact').hide();
-				$('#aboutme').hide();
-				$('#imalink').hide();
-				$("#splash .logo").on( "click", function() {
-			        console.log('click!');
-			        $("#UC").show(500);
-			        $("#imalink").hide(500);
-			    });
-			    $("#contactlink #link").on( "click", function() {
-			        console.log('click!');
-			        $("#contact").show(500);
-			    });
-			    $("#aboutmelink #link").on( "click", function() {
-			        console.log('click!');
-			        $("#aboutme").show(500);
-			    });
-			    
-			    setTimeout(function () {
-					$("#imalink").show(1000)
-				}, 12000);
-				
-			});
-		
-		</script>
-		
-			
+	
 	</body>
 	
 </html>

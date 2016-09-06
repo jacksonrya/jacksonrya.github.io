@@ -1,0 +1,628 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* INCLUDE BROWSER QUERY THAT CONSIDERS SCROLLBAR INCLUSION IN VIEWPORT */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;;
+	vertical-align: baseline;
+	font-weight: normal;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #ffffff;
+  position: fixed;
+  z-index: 2000;
+  top: 53.35vh;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+  z-index: 6;
+}
+
+
+@font-face {
+  font-family: 'Pigeon';
+  src: url('webfonts/Pigeon.eot?#iefix') format('embedded-opentype'),  url('webfonts/Pigeon.otf')  format('opentype'),
+	   url('webfonts/Pigeon.woff') format('woff'), url('webfonts/Pigeon.ttf')  format('truetype'), url('webfonts/Pigeon.svg#Pigeon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#screen {
+	position: absolute;
+	z-index: 5;
+	background-color: transparent;
+	width: 1.25vw;
+	height: 4vh;
+	border: solid #000000;
+	border-width: 49.5vh 49.4vw !important;
+	overflow: hidden;
+}
+
+#negative {
+	position: absolute;
+	z-index: 7;
+	background-color: transparent;
+	width: 1.25vw;
+	height: 4vh;
+	top: 49.5vh;
+	left: 49.375vw;
+}
+
+#negative:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}
+
+#negative a {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    opacity: 0;
+    z-index: 10;
+}
+
+.splash_text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	font-family: 'Pigeon';
+	font-size: 10vh;
+	color: white;
+	display: block;
+}
+
+#hint {
+	opacity: 0;
+	margin-left: 48vw;
+	margin-top: 54vh;
+	font-size: 1vw;
+}
+
+#top {
+	position: absolute;
+	top:0;
+	left:0;
+	height: 30vh;
+	width: 100vw;
+}
+
+#bottom {
+	position: absolute;
+	top:70vh;
+	left:0;
+	height: 30vh;
+	width: 100vw;
+}
+
+#hi {
+	opacity: 0;
+	margin: 30px;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+#please {
+	opacity: 0;
+	margin: 30px;
+	position: absolute;
+	top: 25%;
+	right: 20%;
+}
+
+#help {
+	opacity: 0;
+	margin-bottom: 30px;
+	position: absolute;
+	bottom: 45%;
+	left: 5%;
+}
+
+.house_wdw {
+	position: absolute;
+	z-index: 5;
+	width: 1.75vw;
+	height: 1.75vw;
+	background-color: white;
+	top: 45vh;
+}
+
+#triangle-up {
+	position: absolute;
+	z-index: 5;
+	top: 35vh;
+	left: 45vw;
+	width: 0;
+	height: 0;
+	border-left: 5vw solid transparent;
+	border-right: 5vw solid transparent;
+	border-bottom: 4vw solid white;
+}
+
+#left {
+	left: 46.95vw;
+}
+
+#right {
+	left: 51.25vw;
+}
+
+.hover-font {
+	font-size: 23px;
+}
+
+.vp {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	margin-right: 220px;
+}
+
+#index_pg {
+	margin-right: 0px;
+	z-index: 4;
+	background-color: white;
+	
+}
+
+div {
+	display: block;
+}
+
+div #clean {
+	display: relative;
+	z-index: 3;
+	width: 100vw;
+	margin-left: -18vw;
+	margin-top: 8vh;
+	-moz-transform: rotate(0);
+	text-align: right;
+	opacity: 0.0;
+}
+
+#clean a {
+	text-decoration: none;
+	color: pink;
+	font-family: 'Cousine';
+	font-size: 2.5vh;
+	box-shadow: 1.6vh 1.3vh 1.4vh -1vh #717171;
+}
+
+#header {
+	width: 100vw;
+	height: 18vh;
+	min-height: 90px;
+}
+
+#body {
+	width: 100vw;
+	height: 74vh;
+	min-height: 350px;
+}
+
+#footer {
+	z-index: 3;
+	width: 100vw;
+	height: 8vh;
+	min-height: 60px;
+}
+
+#logo {
+	display: block;
+	z-index: 90;
+	height: 33%;
+	width: auto;
+	padding-top: 2.5vh;
+	padding-left: 1.5vw;
+	-moz-transform: rotate(0);
+}
+
+#ret {
+	position: fixed;
+	z-index: 90;
+	top: .65vh;
+	right: .25vw;
+	-moz-transform: rotate(0);
+}
+
+#ret a img {
+	opacity: .3;
+}
+
+#ret svg:hover {
+	fill: #FFFFFF;
+}
+
+#index_container {
+	z-index: 2;
+	display: inline-block;
+	width: 76.4vw;
+	padding-top: 0%;
+	padding-left: 7%;
+	padding-right: 0%;
+}
+
+.index_box {
+	/* display: inline-block;
+	position: relative;
+	margin-right: 1.5vw; */
+	margin-bottom: 2.2vh;
+	width: 15vw;
+	position: relative;
+	/* Add Media Query to increase 'vw' on larger screen sizes */
+	max-width: 640px;
+	height: 12.3vh;
+	max-height: 310px;
+	z-index: 4;
+	opacity: .3;
+}
+
+.index_box:after {
+	padding-top: 50%;
+	display: block;
+	content: '';
+}
+
+.index_box img {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.index_box img::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  box-shadow: 25px 25px 25px -15px #000;
+}
+
+#nav_bg {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	height: 94.75vh;
+	width: 185px;
+	background-color: white;
+}
+
+#nav {
+	position: fixed;
+	display: inline-block;
+	z-index: 90;
+	width: 15.7vw;
+	margin-left: .5vw;
+	padding-top: 2vh;
+	vertical-align: top;
+	font-family: 'Cousine';
+	font-weight: 400;
+	font-size: 14px;
+	text-align: right;
+	-moz-transform: rotate(0);
+}
+
+ul, ul a {
+	text-decoration: none;
+}
+
+ul li a {
+	opacity: .3;
+}
+
+ul a:active {
+	text-decoration: underline;
+}
+
+ul a:hover{
+	text-decoration: underline;
+}
+
+#information_windows {
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 96%;
+	top: 0;
+	left: 0;
+	display: inline-block;
+}
+
+#information_windows a {
+	display: block;
+}
+.window {
+	visibility: hidden;
+	position: relative;
+	background-color: white;
+	width: 20vw;
+	height: 50vh;
+	-moz-box-shadow: 25px 25px 25px -15px #868686;
+	-webkit-box-shadow: 25px 25px 25px -15px #868686;
+	box-shadow: 25px 25px 25px -15px #868686;
+	color: black;
+	font-family: 'Pigeon';
+	font-size: 14px;
+}
+
+.wdw_header {
+	display: block;
+	font-size: 19px;
+	height: 6%;
+	text-align: right;
+	padding: 5%;
+	text-decoration: underline;
+}
+
+.wdw_content {
+	font-family: 'Cousine';
+	font-size: 14px;
+	padding: 15px;
+}
+
+#information {
+	position: fixed;
+	z-index: 90;
+	bottom: .75vh;
+	right: 0vw;
+	-moz-transform: rotate(0);
+}
+
+#information a {
+	margin-right: .5vw;
+	text-decoration: underline;
+	font-family: 'Pigeon';
+	font-size: 14px;
+}
+
+#CC {
+	z-index: 90;
+	position: fixed;
+	left: 8px;
+	bottom: .65vh;
+	vertical-align: bottom;
+	opacity: .20;
+}
+
+#CC a {
+	font-family: 'Pigeon';
+	font-size: 14px;
+	text-decoration: none;
+}
+
+#CC #box0 img {
+	width: 14px;
+	height: auto;
+}
+
+.description {
+	text-decoration: underline;
+	font-family: 'Cousine';
+	font-size: 12.5px;
+	margin-left: 4.5vw;
+	background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Arapey';
+}
+
+/* Floating-Toggle Textbox
+   Unique black-multiplied shadow from low-floating 'z-indez' 
+*/
+h2,
+h5 {
+	background-color: white;
+	border-top: 1vh solid white;
+	border-right: 1vh solid white;
+	border-bottom: 1vh solid white;
+	-moz-box-shadow: 25px 25px 25px -15px #868686;
+	-webkit-box-shadow: 25px 25px 25px -15px #868686;
+	box-shadow: 25px 25px 33px -15px RGBA(0, 0, 0, 0.49); /* 25, 25, 25, -15 pretest */
+}
+
+h3 {
+	text-align: right;	
+}
+
+h4 {
+	color: pink;
+	position: absolute;
+	font-size: 14.85vw;
+	padding-left: 10px;
+}
+
+h1 {
+	padding-left: 2vw;
+	padding-top: 3vh;
+	font-family: 'Arapey';
+	font-size: 23px;
+}
+h2 {
+	visibility: hidden;
+	width: 25vw;
+	font-size: 1.4vw;
+	padding-top: .15vh;
+	margin-left: 6.5vw;
+}
+
+h3 {
+	padding-top: 1.25vh;
+	padding-bottom: .75vh;
+	font-style: italic;
+	font-size: 14px;
+}
+
+h5 {
+	visibility: hidden;
+	width: 65%;
+	font-size: 2.1vh;
+	margin-left: -1.5vw;
+	margin-top: -22vh;
+	z-index: 2;
+	opacity: .99;
+}
+
+#info {
+	visibility: visible;
+	position: relative;
+	z-index: 1;
+	top: 2vh;
+	left: -2.5vw;
+}
+
+#gheader {
+	position: relative;
+	height: 9.5vh;
+	min-height: 90px;
+	opacity: .99;
+	z-index: 2;
+}
+
+#gbody {
+	height: 72.5vh;
+	min-height: 350px;
+}
+
+#gfooter {
+	height: 18vh;
+	min-height: 60px;
+}
+
+.gallerybox {
+	display: inline-table;
+	margin-left: 8vw;
+	vertical-align: top;
+	max-height: 67vh;
+	max-width: 60vw;
+	border-top: 2vh solid #000;
+}
+
+.gallerybox img {
+	position: relative;
+	top: -2vh;
+	visibility: hidden;
+	max-width: 100%;
+	max-height: 100%;
+	opacity: 0.0;
+}
+
+#box0gallery {
+	width: 87vw;
+}
+
+#box1gallery {
+	width: 204.3vw;
+	
+}
+
+#box2gallery {
+	width: 415vw;
+}
+
+#box8gallery {
+	width: 204.5vw;
+}
+
+#box1gallery, #box2gallery, #box8gallery {
+	display: table;
+	height: 100vh;
+}
+
+#box3gallery {
+	height: 100vh;
+	width: 150vw;
+	font-family: 'Cousine';
+	background-color: #78d0c7;
+}
+
+
+/* Color template for hover and install project unique colors
+
+
+#box1gallery .gallerybox {
+	border-top-color: aqua;
+}
+
+.ui-draggable-dragging#box1 {
+	-moz-box-shadow: 40px 40px aqua;
+	-webkit-box-shadow: 40px 40px aqua;
+	box-shadow: 40px 40px aqua;
+}
+
+#box2gallery .gallerybox {
+	border-top-color: green;
+}
+
+.ui-draggable-dragging#box2 {
+	-moz-box-shadow: 25px 25px 25px -15px green;
+	-webkit-box-shadow: 25px 25px 25px -15px green;
+	box-shadow: 25px 25px 25px -15px green;
+}
+
+#box8.ui-draggable-dragging, #box8gallery .gallerybox {
+	border-top-color: pink;
+}
+
+.ui-draggable-dragging#box8 {
+	-moz-box-shadow: 25px 25px 25px -15px pink;
+	-webkit-box-shadow: 25px 25px 25px -15px pink;
+	box-shadow: 25px 25px 25px -15px pink;
+}
+
+*/
+
+a { color: black; }
+
+@media (max-width: 1331px) {
+	#index_container #box7, #box9 {
+		margin-right: 1.5vw;
+	}
+}
