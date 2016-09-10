@@ -47,7 +47,7 @@ time, mark, audio, video {
   right: 100%;
   width: 100%;
   height: 2px;
-  z-index: 6;
+  z-index: 9;
 }
 
 
@@ -68,6 +68,16 @@ time, mark, audio, video {
 	border: solid #000000;
 	border-width: 49.5vh 49.4vw !important;
 	overflow: hidden;
+}
+
+#door {
+	position: absolute;
+	z-index: 7;
+	background-color: black;
+	width: 1.25vw;
+	height: 4vh;
+	top: 49.5vh;
+	left: 49.375vw;
 }
 
 #negative {
@@ -108,47 +118,18 @@ time, mark, audio, video {
 	display: block;
 }
 
-#hint {
-	opacity: 0;
-	margin-left: 48vw;
-	margin-top: 54vh;
-	font-size: 1vw;
-}
-
-#top {
-	position: absolute;
-	top:0;
-	left:0;
-	height: 30vh;
-	width: 100vw;
-}
-
 #bottom {
 	position: absolute;
-	top:70vh;
-	left:0;
+	font-size: 40%;
+	top: 70vh;
+	left: 41vw;
 	height: 30vh;
 	width: 100vw;
+	opacity: 0.0;
 }
 
-#hi {
-	opacity: 0;
-	margin: 30px;
-	position: absolute;
-	top:0;
-	left:0;
-}
-
-#please {
-	opacity: 0;
-	margin: 30px;
-	position: absolute;
-	top: 25%;
-	right: 20%;
-}
-
-#help {
-	opacity: 0;
+#2 {
+	opacity: 0.0;
 	margin-bottom: 30px;
 	position: absolute;
 	bottom: 45%;
@@ -263,7 +244,7 @@ div #clean {
 }
 
 #ret a img {
-	opacity: .3;
+	opacity: 0.3;
 }
 
 #ret svg:hover {
@@ -291,7 +272,7 @@ div #clean {
 	height: 12.3vh;
 	max-height: 310px;
 	z-index: 4;
-	opacity: .3;
+	opacity: 0.3;
 }
 
 .index_box:after {
@@ -327,7 +308,7 @@ div #clean {
 	z-index: 2;
 	height: 94.75vh;
 	width: 185px;
-	background-color: white;
+	/* background-color: white; */
 }
 
 #nav {
@@ -345,12 +326,36 @@ div #clean {
 	-moz-transform: rotate(0);
 }
 
+#nav #projectMenu {
+	width: 100%;
+	position: fixed;
+}
+
+#nav #projectMenu li:not(#sort) {
+	display: inline;
+}
+
+#nav #sortMenu {
+	z-index: 89;
+	opacity: 0.0;
+	display: noneproject;
+	margin-top: -107px;
+	position: fixed;
+	width: 100%;
+}
+
 ul, ul a {
 	text-decoration: none;
 }
 
+/* Better style than above, more efficient for search tool */
+#nav #projectMenu #sort {
+	opacity: 0.3;
+	font-size: 20px;
+}
+
 ul li a {
-	opacity: .3;
+	opacity: 0.3;
 }
 
 ul a:active {
@@ -361,17 +366,18 @@ ul a:hover{
 	text-decoration: underline;
 }
 
-#information_windows {
-	visibility: hidden;
+#informationPopUp {
+	z-index: 90;
 	position: fixed;
 	width: 100%;
 	height: 96%;
 	top: 0;
 	left: 0;
+	visibility: hidden;
 	display: inline-block;
 }
 
-#information_windows a {
+#informationPopUp a {
 	display: block;
 }
 .window {
@@ -558,6 +564,10 @@ h5 {
 	width: 87vw;
 }
 
+nav #projectMenu #box0 {
+	visibility: hidden;
+}
+
 #box1gallery {
 	width: 204.3vw;
 	
@@ -583,46 +593,4 @@ h5 {
 	background-color: #78d0c7;
 }
 
-
-/* Color template for hover and install project unique colors
-
-
-#box1gallery .gallerybox {
-	border-top-color: aqua;
-}
-
-.ui-draggable-dragging#box1 {
-	-moz-box-shadow: 40px 40px aqua;
-	-webkit-box-shadow: 40px 40px aqua;
-	box-shadow: 40px 40px aqua;
-}
-
-#box2gallery .gallerybox {
-	border-top-color: green;
-}
-
-.ui-draggable-dragging#box2 {
-	-moz-box-shadow: 25px 25px 25px -15px green;
-	-webkit-box-shadow: 25px 25px 25px -15px green;
-	box-shadow: 25px 25px 25px -15px green;
-}
-
-#box8.ui-draggable-dragging, #box8gallery .gallerybox {
-	border-top-color: pink;
-}
-
-.ui-draggable-dragging#box8 {
-	-moz-box-shadow: 25px 25px 25px -15px pink;
-	-webkit-box-shadow: 25px 25px 25px -15px pink;
-	box-shadow: 25px 25px 25px -15px pink;
-}
-
-*/
-
 a { color: black; }
-
-@media (max-width: 1331px) {
-	#index_container #box7, #box9 {
-		margin-right: 1.5vw;
-	}
-}

@@ -78,30 +78,25 @@
 	
 		<!-- START SPLASH PAGE -->
 		
-		
-			<!-- BLACK SCREEN & HOVER ELEMENT -->
+			<! BLACK SCREEN & HOVER ELEMENT >
 		<div id="screen"></div>
+		<div id = "door"></div>
 		<div id="negative"><a id="negclick" onclick="negative(); return false;">_</a></div>
 		
-			<!-- FLASH AND FADE TEXT -->
+			<! FLASH AND FADE TEXT >
 		<div class="splash_text">
 		
-			<div id="top"><div id="hi">hi</div>
-			<div id="please">welcome</div></div>
-			<div id="bottom"><div id="help">my things are a mess, but please come in</div></div>
-			<div id="hint">(click here)</div>
+			<div id="bottom"><div id="2">please, come in</div></div>
 			
 		</div>
 		
-			<!-- HOUSE SYMBOL -->
+			<! HOUSE SYMBOL >
 		<div id="triangle-up"></div>
 		<div class="house_wdw" id="left"></div>
 		<div class="house_wdw" id="right"></div>
 		
-		
-		
 		<!-- END SPLASH PAGE -->
-		
+				
 		
 		
 		<!-- START INDEX PAGE -->
@@ -140,7 +135,7 @@
 			
 				<!-- START FLOATING INFORMATION WINDOWS -->
 			
-				<div id="information_windows">
+				<div id="informationPopUp">
 					
 					<div class="window" id="about" style="top: 10vh; left: 10vw;">
 						
@@ -206,31 +201,50 @@
 					
 				</div>
 				
+				
+				<div id="nav_bg"></div>
+
+				
 				<div id="nav">
+	
+					<ul id="projectMenu" style="list-style-type:none">
 					
-					<ul id="project_menu" style="list-style-type:none">
+						<li id="sort" active="0"><a id="m" href="javascript:;" onclick="sortOptions(); return false;">sort</a></li><br>
+
+						<li id="box3" active="0"><a id="m" href="#selfie" alt="3-1">spacemaker</a></li><br><br>
+						
+						<li id="box6" active="0"><a id="m" href="#selfie" alt="2-2">santa monica study</a></li><br><br>
+						
+						<li id="box7" active="0"><a id="m" href="#selfie" alt="3-2">salsa-obsessed house</a></li><br><br>
+						
+						<li id="box2" active="0" loaded="yes"><a id="m" href="#selfie" alt="2-1">accessing luminosity</a></li><br><br>
+						
+						<li id="box9" active="0"><a id="m" href="#selfie" alt="2-3">aeolus</a></li><br><br>
+						
+						<li id="box8" active="0" loaded="yes" ><a id="m" href="#selfie" alt="1-3">re-viewing nolli</a></li><br><br>
+						
+						<li id="box5" active="0"><a id="m" href="#selfie" alt="1-2">le fresnoy 2.0</a></li><br><br>
+						
+						<li id="box4" active="0"><a id="m" href="#selfie" alt="4-1">infrastructures</a></li><br><br>
+						
+						<li id="box1" active="0" loaded="yes" ><a id="m" href="#selfie" alt="1-1">home for sale(s)</a></li><br><br>
+						
+						<li id="box10" active="0"><a id="m" href="#selfie" alt="1-4">sketchbook</a></li><br><br>
+						
+					</ul>
 					
-						<li id="box3" active="0"><a id="m" href="#selfie" alt="3-1">spacemaker</a></li><br>
+					<ul id="sortMenu" style="list-style-type:none">
 						
-						<li id="box6" active="0"><a id="m" href="#selfie" alt="2-2">santa monica study</a></li><br>
+						<li id="sort" active="0"></li><br>
+					
+						<li id="sort1" active="0"><a id="m" href="/" 
+								onclick="sortOptionsRender('chronological'); return false;">chronological</a></li><br>
 						
-						<li id="box7" active="0"><a id="m" href="#selfie" alt="3-2">salsa-obsessed house</a></li><br>
+						<li id="sort2" active="0"><a id="m" href="/" 
+								onclick="sortOptionsRender('arts'); return false;">arts // architecture</a></li><br>
 						
-						<li id="box2" active="0" loaded="yes"><a id="m" href="#selfie" alt="2-1">accessing luminosity</a></li><br>
-						
-						<li id="box9" active="0"><a id="m" href="#selfie" alt="2-3">aeolus</a></li><br>
-						
-						<li id="box8" active="0" loaded="yes" ><a id="m" href="#selfie" alt="1-3">re-viewing nolli</a></li><br>
-						
-						<li id="box5" active="0"><a id="m" href="#selfie" alt="1-2">le fresnoy 2.0</a></li><br>
-						
-						<li id="box4" active="0"><a id="m" href="#selfie" alt="4-1">infrastructures</a></li><br>
-						
-						<li id="box1" active="0" loaded="yes" ><a id="m" href="#selfie" alt="1-1">home for sale(s)</a></li><br>
-						
-						<li id="box10" active="0"><a id="m" href="#selfie" alt="1-4">sketchbook</a></li><br>
-						
-						<li id="box0" active="0"><a id="m" href="#selfie" style="opacity: 0.0;">jbr.fyi</a></li><br>
+						<li id="sort3" active="0"><a id="m" href="/" 
+								onclick="sortOptionsRender('choice'); return false;">your choice</a></li><br>
 						
 					</ul>
 				
@@ -257,9 +271,9 @@
 		
 				<div id="information">
 				
-					<a href="/" onclick="informationwindow('about'); return false;">about jbr</a>
-					<a href="/" onclick="informationwindow('etc'); return false;">et cetera</a>
-					<a href="/" onclick="informationwindow('contact'); return false;">contact</a>
+					<a href="/" onclick="informationPopUp('about'); return false;">about jbr</a>
+					<a href="/" onclick="informationPopUp('etc'); return false;">et cetera</a>
+					<a href="/" onclick="informationPopUp('contact'); return false;">contact</a>
 					
 				</div>
 		
@@ -274,16 +288,6 @@
 						
 		<script>
 		
-		//Edit plug-in script to slow scroll horizontally to anchor
-		
-			var clickCount = 0;
-			// Turns links into on-click toggles for UnderConstruction
-			$('a').not("#information a, #negative a").click(function() {
-				clickCount++;
-				randomizeColor();
-				menuGrowth(clickCount);
-			});
-		
 			// Changes color of UNDER CONSTRUCTION title by random on click
 			// 
 			function randomizeColor() {
@@ -293,10 +297,229 @@
 				  $('h4').css({ color: font_colour });
 			}
 			
+			// Increases font-size of about me/ information pop-ups
 			function menuGrowth(clickCount) {
 				var fontSize = 14 + clickCount;
 				$('#information a').css('font-size', fontSize + 'px');
 			}
+			
+			var clickCount = 0;
+			// Turns links into on-click toggles for UnderConstruction
+			$('a').not("#information a, #negative a").click(function() {
+				clickCount++;
+				randomizeColor();
+				menuGrowth(clickCount);
+			});
+			
+			/////////////////////////////////
+			// INJECTION From CURRENT_FILE //
+			/////////////////////////////////
+			
+			// Selector Variables
+		var $projectLinks = $("div[id^='box'], li[id^='box'], #CC a");
+		var $projectBoxes = $(".index_box");
+		
+		var pageSetup = {
+			// Checks for matching mobile device. Returns true if device is detected,
+			// returns false if no mobile device is detected
+			mobileDeviceCheck: function() {	
+				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.									
+						test(navigator.userAgent) ) { 
+					return true;
+				} else {
+					return false;
+				}
+			}
+		};
+		
+		// Splash page object literal
+		// Renders splash page, preloads site's contents in background, loads progress bar
+		var splashPage = {
+			
+			// Predownloads website's contents in background
+			// parameter(s):
+			//		isMobile = whether or not the user's device is mobile
+			loadSite: function(isMobile) {
+				if (isMobile) {
+					console.log( "Loading mobile site in background" );
+				} else {
+					console.log( "Loading desktop site in background" );
+				}
+			},
+			
+			// Renders door movement and text reveal upon complete loading
+			// parameter(s):
+			//		isMobile = whether or not the user's device is mobile
+			renderSplashPage: function(isMobile) {
+				if (isMobile) {
+					console.log( "Rendering mobile splash page" );
+				} else {
+					console.log( "Rendering desktop splash page" );
+					Pace.on('done', function() {
+						setTimeout(function() {
+							$(".splash_text #bottom").css({'opacity': 0.0}).animate({opacity: 1.0}, 5000);
+						}, 15000)
+						$("body #door").animate({left: "-=1.25vw"}, 4000, 'easeOutSine');
+					});
+				}
+			}
+		};
+		
+		// Navigation control object literal
+		var navigation = {
+			toSortMenu: function() {
+				var $sortButton = $("#nav #projectMenu #sort");
+				var $sortNavigation = $("#nav #sortMenu");
+				var $projectNavigation = $("#nav #projectMenu li[id^='box']");
+			
+				$sortButton.css({
+					'opacity': 1.0,
+					'text-decoration': 'underline'
+				});
+				$projectNavigation.css({
+					'opacity': 0.3
+				});
+				$sortNavigation.css({
+					'opacity': 1.0,
+					'display': 'block'
+				});
+			},
+			
+			toMainMenu: function() {
+				var $sortButton = $("#nav #projectMenu #sort");
+				var $sortNavigation = $("#nav #sortMenu");
+				var $projectNavigation = $("#nav #projectMenu li[id^='box']");
+				
+				$sortButton.css({
+					'opacity': 0.3,
+					'text-decoration': 'none'
+				});
+				$projectNavigation.css({
+					'opacity': 1.0
+				});
+				$sortNavigation.css({
+					'opacity': 0.0,
+					'display': 'none'
+				});
+			}
+		}
+		          
+        // LINK-ACTIVATED FUNCTIONS
+		
+		// Toggles sort menu upon clicking 'sort'
+		function sortOptions() {
+			var $sortButton = $("#nav #projectMenu #sort");
+			var isActive = $sortButton.css('opacity');
+			
+			if (isActive == 0.3) { // Sort button becomes active
+				navigation.toSortMenu();
+			} else if (isActive == 1.0) { // Sort button becomes unactive
+				navigation.toMainMenu();
+			}
+		}
+		
+		// Renders user selected sort option
+		// parameter(s):
+		//		option = String of corresponding activated link
+		function sortOptionsRender(option) {
+			var $sortButton = $("#nav #projectMenu #sort");
+			var $sortNavigation = $("#nav #sortMenu");
+			var $projectNavigation = $("#nav #projectMenu li[id^='box']");
+			
+			navigation.toMainMenu();
+			
+			if (option === "chronological") {
+				console.log("Chronological");
+			} else if (option === "arts") {
+				console.log("Arts // Architecture");
+			} else if (option === "choice") {
+				console.log("Your Choice");
+			} else {
+				console.log('error');
+			}
+		}
+		
+		// Toggles about/information pop-up windows
+		function informationPopUp(title) {
+			var $currentPopUp = $('#informationPopUp #' + title);
+			var isOpen = $currentPopUp.css('visibility');
+			if (isOpen === "visible") {
+				console.log("Window Closed");
+				// $currentPopUp.css('display', 'none');
+				$currentPopUp.css('visibility', 'hidden');
+			} else {
+				console.log("Window Open");
+				// $currentPopUp.css('display', 'inline-block');
+				$currentPopUp.css('visibility', 'visible');
+			}
+ 		}
+				
+		// Enlarge project navigation text upon hovering over correlated index images
+		$("div[id^='box'], #CC a").hover(
+					function() {
+						// Entangles index images and menu links					
+						var coor = $( this ).attr("id");
+						// Builds selection with same "id=" then adds styling class
+						$("li[id=" + coor + "]").stop(true, true).animate({fontSize : "24px"}, 3000);
+					},
+					function() {
+						// Releases styling classes after hover ends
+						var coor = $( this ).attr("id");						
+						$("li[id=" + coor + "]").stop().animate({ fontSize : '14px' }, 250);
+					}
+		);
+		
+		// Isolates and focused(not dimmed) single index image correlated with project navigation list item while hovered
+		$("#nav #projectMenu li").not("#sort").hover(
+			function() {
+				// Entangles index images and menu links
+				var coor = $( this ).attr("id");	
+				var $allIndexImagesExceptSelected = $("#index_container div").not("#index_container div[id=" + coor +"]");
+				// Builds selection with same "id=" then adds styling class
+				$allIndexImagesExceptSelected.stop(true, true).animate({opacity : "0.05"}, 250);
+			},
+			function() {
+				// Releases styling classes after hover ends
+				var coor = $( this ).attr("id");
+				var $allIndexImagesExceptSelected = $("#index_container div").not("#index_container div[id=" + coor +"]");
+				$allIndexImagesExceptSelected.stop(true, true).animate({opacity : "0.3"}, 500);
+			}
+		);
+		
+					
+		//
+		// Start of Site
+		//
+		
+		// Initializes site upon user's visit
+		$(document).ready(function() {
+			$("html").css("overflow", "hidden"); // Prevents scrolling on splash and index pages
+			
+			var isMobile = pageSetup.mobileDeviceCheck();
+			splashPage.loadSite(isMobile);
+			splashPage.renderSplashPage(isMobile);
+		});
+			
+			
+			////////////////////////////////////////////
+			// Code to fix /////////////////////////////
+			////////////////////////////////////////////
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
             
             window.onkeydown = function(e) {
 			    if(e.keyCode == 32 && e.target == document.body) {
@@ -305,176 +528,74 @@
 			    }
 			};
 						
-			$('.index_box').draggable({ stack: ".index_box", containment: "#index_pg", scroll: false});
+			$('.index_box').draggable({ cursor: "move", cursorAt: { top: 50, left: 50 }, // FIX FAILURE OF CURSOR CHANGE BY APPLYING TO CSS AS WELL
+										stack: ".index_box", containment: "#index_pg", scroll: false,
+			
+											//stop: function to prevent click initiation after dragging	
+										stop: function(event, ui) {
+									        // event.toElement is the element that was responsible
+									        // for triggering this event. The handle, in case of a draggable.
+									        $( event.originalEvent.target ).one('click', function(e){ e.stopImmediatePropagation(); } );
+									    }
+				
+			});
+
 						
 			function clean() {
-				$('#index_container #box5').animate({ top: '-60vh', left: '62vw'}, 300, 'easeOutSine');
+				function fade_shadow() {
+					$('.index_box img::after').animate(
+						{ opacity: 1 },
+						{ queue: false, duration:150, specialEasing: 'easeOutSine' }
+					);
+				}
+				
+				$('#index_container #box5').animate(
+					{ top: '-60vh', left: '62vw'},
+					{ queue: false, duration: 300, specialEasing: 'easeOutSine'}
+				);
+				
+				$('.index_box img::after').animate(
+					{ opacity: 0 },
+					{ queue: false, duration:150, specialEasing: 'easeInSine' }
+				);
+				
+				setTimeout(fade_shadow, 150);
+				
 				function devis() {
 					$('#clean').stop().css({ visibility: 'hidden'});
 				}
+				
 				setTimeout(devis, 305);
-			}
-					
-			//Starts count for # of box requests--determines order of visibility
-			var clix = 0;
-			var caption_vis = 1;
-			
-			function informationwindow(tri) {
-			
-				$('#information_windows').css('z-index', '90');
-				
-				$('#information_windows #' + tri).css('visibility', 'visible');
-				
 			};
-			
-			function close(tri) {
-			
-				$('#information_windows #' + tri).css('visibility', 'hidden');
-				
-			};
-			
-			function description(BC) {
-            	
-	            console.log('D Click');
-	            console.log('#gheader h2 ' + BC);
-	            var $isithidden = $("#gheader #h2" + BC).css('visibility');
-	            console.log($isithidden +' ' + BC);
-	            
-	            if ( $isithidden === "hidden" ) {
-	            
-		            $("#gheader  #h2" + BC).css('visibility', 'visible');
-		            
-		            console.log('if');
-		            
-	            } else if ( $isithidden === "visible" ) {
-	            
-		            $("#gheader #h2" + BC).css('visibility', 'hidden');
-		            
-	            } else {
-	            
-	            	console.log('error');
-	            	
-				};
-            };
-			
-			   /////
-				
-			$(document).ready(function() {
-			
-			
-				// PREVENT SCROLLING SPLASH AND INDEX_PAGE
-			
-				$("html").css("overflow", "hidden");
-								
-			});
-			
-			// END // OF DOCUMENT.READY FUNCTION
-			
-			///////////////////////////////////
-			
-			// START // OF SPLASH PAGE WORDS FLASH AND FADE
-				
-					// talk_loop closes at negative.hover
-				
-				var talk_loop = 0;
-				
-				function hi() {
-					$('#hi').css({'opacity': 1.0}).animate({ opacity: 0.0 }, 5000);
-				}
-				function please() {
-					$('#please').css({'opacity': 1.0}).animate({ opacity: 0.0 }, 5000);
-				}
-				function help() {
-					$('#help').css({'opacity': 1.0}).animate({ opacity: 0.0 }, 5000);
-				}
-				function hint() {
-					$('#hint').css({'opacity': 0.8});
-				}
-				
-
-				function loopLi() {
-				    setInterval(function() { // this code is executed every 5100 milliseconds:
-				
-				        if(talk_loop === 0) {
-				         //   setTimeout(hi, 350);
-							setTimeout(please, 1500);
-							setTimeout(help, 2250);
-				        }
-				
-				    }, 5100);
-					setTimeout(hint, 6500);
-				}
-				
-				function clear_screen() {
-					$('#screen').css({ width: 0, "z-index": "-2", visibility: "hidden", top: 0, left: 0, border: 0, width: 0, height: 0 });
-					$('#negative, .house_wdw, #triangle-up, #floor, #hint, .splash_text').css({ width: 0, height: 0, top: '-100vh', left: 0, display: "hidden", visibility: "hidden", 'z-index': '-2' });
-					function reveal_menu() {
-							$('#ret').css({ visibility: "visible" }).animate({ opacity: 1.0}, 250).off();
-							$('#nav, #logo, #information').css({ visibility: "visible" }).animate({opacity: 1}, 750).off();
-					}
-						
-					setTimeout(reveal_menu, 250);
-				}
-			
-			
-				function negative() {
-					talk_loop = 1;
-					$('#negative').css({'z-index': '-2'});
-					$('#nav, #ret, #logo, #information').css({ opacity: 0.0, visibility: "hidden" });
-					$('.splash_text, #top, #bottom, .pace .pace-progress').css({ opacity: 1.0, visibility: "visible" }).animate({ opacity: 0.0, visibility: "hidden"}, 250, 'easeOutSine');
-					$('#top, #bottom, #hi, #please, #help').css({width: 0, height: 0, 'z-index': '-2', left: '-100vw'});
-				    $("#screen").stop().animate({
-				        top: "-49.5vh",
-				        left: "-49.375vw",
-				        width: "100vw",
-				        height: "320vh",
-				    }, 1500, 'easeInSine' );
-				    setTimeout(clear_screen, 1500);
-				}
-				
-				Pace.on('done', function() {
-				
-					setTimeout(hi, 500);
-					setTimeout(please, 1500);
-					setTimeout(help, 3250);
 					
-					$(loopLi);
-				
-				});
-				
-				// END // OF SPLASH PAGE WORDS FLASH AND FADE-- negative.hover WAS INITIATED TO END LOOP
-
-			
-			
-			///////////////////////////////////
-						
-			// START // OF ENLARGE TEXT MENU ON HOVER OVER INDEX IMAGES
-			
-			$( "div[id^='box'], #CC a" ).hover(
-						
-					function() {
-						// Entangles index images and menu links					
-						var coor = $( this ).attr("id");
-						// Builds selection with same "id=" then adds styling class
-						$("li[id=" + coor + "]").stop(true, true).animate({ fontSize : '24px' }, 3000);
-					},
-					function() {
-						// Releases styling classes after hover ends
-						var coor = $( this ).attr("id");						
-						$("li[id=" + coor + "]").stop().animate({ fontSize : '14px' }, 250);
-					}
-			);
-			
-			// END // OF ENLARGE TEXT MENU ON HOVER OVER INDEX IMAGES
-			
-			function ret() {
-				var ret_distance = $('body').offset().left;
-				
-				$('html, body').stop(true, true).animate({
-                
-                    scrollLeft: ret_distance }, 800, 'easeInOutSine');
+			function clear_screen() {
+				$('#screen').css({ width: 0, "z-index": "-2", visibility: "hidden", top: 0, left: 0, border: 0, width: 0, height: 0 });
+				$('#negative, .house_wdw, #triangle-up, #floor').css({ width: 0, height: 0, top: '-100vh', left: 0, display: "hidden", 'z-index': '-2' });
+				function reveal_menu() {
+						$('#ret').css({ visibility: "visible" }).animate({ opacity: 1.0}, 250).off();
+						$('#nav, #nav_bg, #logo, #information').css({ visibility: "visible" }).animate({opacity: 1}, 750).off();
+				}
+					
+				setTimeout(reveal_menu, 250);
 			}
-			
+		
+		
+			function negative() {
+				$('#negative').css({'z-index': '-2'});
+				$("body #door").css({'opacity': 0.0});
+				$('#nav, #nav_bg, #ret, #logo, #information').css({ opacity: 0.0, visibility: "hidden" });
+				$('.splash_text, #bottom, .pace .pace-progress').css({ opacity: 1.0, visibility: "visible" }).animate({ opacity: 0.0, visibility: "hidden"}, 250, 'easeOutSine');
+				$('#2, #bottom').css({width: 0, height: 0, 'z-index': '-2', left: '-100vw'});
+			    $("#screen").stop().animate({
+			        top: "-49.5vh",
+			        left: "-49.375vw",
+			        width: "100vw",
+			        height: "320vh",
+			    }, 1500, 'easeInSine' );
+			    setTimeout(clear_screen, 1500);
+			}				
+			// END // OF SPLASH PAGE WORDS FLASH AND FADE-- negative.hover WAS INITIATED TO END LOOP
+						
 		</script>
 		
 	
