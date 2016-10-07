@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="UTF-8"> 
+		<! OPENGRAPH META TAGS >
+		
+		<!-- CONSULT FACEBOOK/ TWITTER IMAGE WHEN REFERENCED
+		<meta property="og:title" content="twinkle glue remover" />
+		<meta property="og:url" content="twinkleglueremover.com" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="http://www.cache.moda/images/cache_og_splash.jpg" />
+		-->
+		<title>an all-ecompassing self</title>
+		<! Favicon >
+		<link REL="SHORTCUT ICON" HREF="images/favicon.png">
+		
+		<! CSS >
+		<link href="css/gardenStyles.css" rel="stylesheet">
+		
+		<! JS >
+		<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	</head>
+	<body>
+		<script>
+			var source = $.now() % 4 + 1;
+			var phrase1Number = Math.floor((Math.random() * 100) + 1) % 4 + 1;
+			var phrase2Number = Math.floor((Math.random() * 100) + 1) % 6 + 1;
+			var phrase3Number = Math.floor((Math.random() * 100) + 1) % 4 + 1;
+			var phrase4Number = Math.floor((Math.random() * 100) + 1) % 4 + 1;
+			var phrase5Number = Math.floor((Math.random() * 100) + 1) % 4 + 1;
+			var phrase6Number = Math.floor((Math.random() * 100) + 1) % 4 + 1;
+			var phrase7Number = Math.floor((Math.random() * 100) + 1) % 4 + 1;
+		</script>
+		<div id="background">
+			<img id="backgroundImage" src="images/gardenImages/background_1.jpg">
+			<img id="phrase3_1" src="">
+			<img id="phrase1_1" src="">
+			<img id="phrase2" src="">
+			<img id="phrase3_2" src="">
+			<img id="phrase4_1" src="">
+			<img id="phrase1_2" src="">
+			<img id="phrase4_2" src="">
+		</div>
+		<div id="splash">
+			<a href="#" onclick="revealPoem(source); return false;">
+				<img id="splashImage" src="">
+			</a>
+		</div>
+	
+		<script>
+		
+		$("#splashImage").attr("src", "images/gardenImages/splash_" + source + ".jpg"); // Randomly applies splash img
+		
+		$("#phrase3_1").attr("src", "images/gardenImages/phrase3/phrase3_" + phrase3Number + ".png");
+		$("#phrase1_1").attr("src", "images/gardenImages/phrase1/phrase1_" + phrase1Number + ".png"); // Randomly applies phrase1
+		$("#phrase2").attr("src", "images/gardenImages/phrase2/phrase2_" + phrase2Number + ".png");
+		$("#phrase3_2").attr("src", "images/gardenImages/phrase3/phrase3_" + phrase5Number + ".png");
+		$("#phrase4_1").attr("src", "images/gardenImages/phrase4/phrase4_" + phrase4Number + ".png");
+		$("#phrase1_2").attr("src", "images/gardenImages/phrase1/phrase1_" + phrase6Number + ".png");
+		$("#phrase4_2").attr("src", "images/gardenImages/phrase4/phrase4_" + phrase7Number + ".png");
+		
+		// $("#phrase2").attr("src", "images/gardenImages/phrase1/phrase1_" + phrase2Number + ".png");
+		
+		// Hides splash quote and reveals poem underneath
+		// parameter(s) needed:
+		//		sourceNumber = 'randomly' generated number between 1-4 the correlates to a unique splash scan
+		function revealPoem(sourceNumber) {
+			$("#splash").animate({opacity: 0}, 1000, false);
+			$("#background").animate({opacity: 100}, 1000, false);
+			setTimeout(function() {
+				// $("#splash").css({display: "none"});
+				$("body").css({"overflow-y": "visible"});
+				$("#splash").css({display: "none"});
+			}, 1000);
+		}
+		
+		$(document).ready(function() {
+			$(this).scrollTop(0);
+		});
+		
+		
+		</script>
+	</body>
+</html>
