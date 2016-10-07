@@ -14,6 +14,9 @@
 		<! Favicon >
 		<link REL="SHORTCUT ICON" HREF="images/favicon.png">
 		
+		<link href='https://fonts.googleapis.com/css?family=Cousine:400' rel='stylesheet' type='text/css'>
+
+		
 		<! CSS >
 		<link href="css/gardenStyles.css" rel="stylesheet">
 		
@@ -42,6 +45,11 @@
 			<img id="phrase4_1" src="">
 			<img id="phrase1_2" src="">
 			<img id="phrase4_2" src="">
+			<a href="#" onclick="revealInfo(); return false;" id="infoClick">information</a>
+			<div id="info">
+				<p>An All-Encompassing Self is a website as poem, with randomly generated structure and choice of pre-chosen content. In order to express my open and ever-changing forms that shape my personality, I mimicked the infinite and alternating realities that Borges employed in "The Garden of Forking Paths". The website project starts off with the same crucial quote from the story that speaks of a confidence one must accept in themselves when considering their endeavors. A poem is generated that speaks of how I am, how I could be, and how I was, using personally resonant quotes from the short story. The order is not important as I find time circular, and if I once could be described as a line in the poem, I will return to that descriptor again. Similar to Borges's hypertextual invention, this poem approaches dendritic storylines as fused shape; it's outline wraps time, not space.<br><br>The content's form is reminiscent of warped scans; altered copies of an original. A process symbolic of what the poems' relationships hold towards my current and acting personality. This project is an opportunity to explore and explain the hindrances of my personality, manifested by finding myself within the characters of the short story.
+				</p>
+			</div>
 		</div>
 		<div id="splash">
 			<a href="#" onclick="revealPoem(source); return false;">
@@ -74,6 +82,20 @@
 				$("body").css({"overflow-y": "visible"});
 				$("#splash").css({display: "none"});
 			}, 1000);
+		}
+		
+		function revealInfo() {
+			var $infop = $("#info p");
+			var $info = $("#info");
+			var visible = $infop.css("display");
+			console.log(visible);
+			if (visible === "none") {
+				$info.css({opacity: 100});
+				$infop.css({display: "block"});
+			} else if (visible === "block") {
+				$info.css({opacity: 0});
+				$infop.css({display: "none"});
+			}
 		}
 		
 		$(document).ready(function() {

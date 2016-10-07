@@ -3,6 +3,8 @@
 	padding: 0;
 	font-style: normal;
 	font-weight: normal;
+	text-decoration: none;
+	color: black;
 }
 
 body {
@@ -104,4 +106,33 @@ body {
 	width: 50%;
 	top: 170vh;
 	left: 24vw;
+}
+
+#info {
+	position: fixed;
+	opacity: 0;
+	margin: auto;
+	width: 30vw;
+	height: auto;
+	padding: 30px;
+	font-size: 15px;
+	display: block;
+	top:0;
+	left:0;
+	background-color: white;
+	font-family: 'Cousine';
+}
+
+#info p {
+	display: none;
+}
+
+#infoClick {
+	font-family: 'Cousine';
+	z-index: 3;
+	font-size: 15px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	color: gray;
 }
