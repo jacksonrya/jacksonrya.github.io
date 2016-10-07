@@ -443,14 +443,18 @@
 		function informationPopUp(title) {
 			var $currentPopUp = $('#informationPopUp #' + title);
 			var isOpen = $currentPopUp.css('visibility');
+			var $link = $( this );
 			if (isOpen === "visible") {
 				console.log("Window Closed");
 				// $currentPopUp.css('display', 'none');
 				$currentPopUp.css('visibility', 'hidden');
+// FIX				$link.css('text-decoration', 'underline');
+// attempting to remove underline from link when pop-up is open
 			} else {
 				console.log("Window Open");
 				// $currentPopUp.css('display', 'inline-block');
 				$currentPopUp.css('visibility', 'visible');
+// FIX				$link.css('text-decoration', 'none');
 			}
  		}
 				
