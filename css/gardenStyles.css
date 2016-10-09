@@ -131,7 +131,7 @@ body {
 	top:0;
 	left:0;
 	background-color: white;
-	font-family: 'Cousine';
+	font-family: 'Cousine', monospace;
 }
 
 #info p {
@@ -147,4 +147,10 @@ body {
 	bottom: 0;
 	right: 0;
 	color: black;
+}
+
+strong {
+	display: inline-block;
+	font-family: 'Cousine', monospace;
+	font-style: italic;
 }
