@@ -121,6 +121,11 @@
                 $("#infoClick").css({color: rgb});
             });
             
+            $( window ).resize(function() {
+	            console.log($(window).width());
+            });
+            
+            // Refreshes page after 4 minutes
             setTimeout(location.reload.bind(location), 240000);
 		});
 		

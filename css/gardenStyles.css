@@ -154,3 +154,10 @@ strong {
 	font-family: 'Cousine', monospace;
 	font-style: italic;
 }
+
+@media (max-width: 1000px) {
+	#splashImage {
+		min-width: 0px;
+		border: none;
+	}
+}
